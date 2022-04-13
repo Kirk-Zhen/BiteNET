@@ -7,8 +7,8 @@ class Configs(object):
     def __init__(self):
         root_dir, _ = os.path.split(os.path.abspath(__file__))
         root_dir = os.path.dirname(root_dir)
-        root_dir = os.path.dirname(root_dir)
-        root_dir = os.path.dirname(root_dir)
+#         root_dir = os.path.dirname(root_dir)
+#         root_dir = os.path.dirname(root_dir)
         self.project_dir = root_dir
         self.icd_file = join(self.project_dir, 'utils/ontologies/D_ICD_DIAGNOSES.csv')
         self.ccs_file = join(self.project_dir, 'utils/ontologies/SingleDX-edit.txt')
