@@ -8,8 +8,7 @@ import warnings
 import heapq
 import operator
 import tensorflow as tf
-from utils.evaluation import ConceptEvaluation as CodeEval, \
-    EvaluationTemplate as Evaluation
+from utils.evaluation import ConceptEvaluation as CodeEval, EvaluationTemplate as Evaluation
 warnings.filterwarnings('ignore')
 logging = RecordLog()
 
