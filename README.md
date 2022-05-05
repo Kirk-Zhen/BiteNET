@@ -4,6 +4,8 @@
 dataset.data_prepararion.py for MIMIC III dataset
 
 ## Train Model
+
+Re-admission
 ```bash
 python BiteNet_mh_RE.py \
         --data_source mimic3  --model Bite --verbose True --task BiteNet \
@@ -13,7 +15,7 @@ python BiteNet_mh_RE.py \
 ```
 
 
-
+Diagnosis
 ```bash
 python BiteNet_mh_DX.py \
         --data_source mimic3  --model Bite --verbose True --task BiteNet \
