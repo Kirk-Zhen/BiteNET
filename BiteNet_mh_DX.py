@@ -24,9 +24,9 @@ def train():
     data_set.build_dictionary()
     data_set.load_data()
     code_eval = CodeEval(data_set, logging)
-    print(data_set.train_context_codes.shape)
-    print(data_set.train_intervals.shape)
-    print(data_set.train_labels_2.shape)
+    # print(data_set.train_context_codes.shape)
+    # print(data_set.train_intervals.shape)
+    # print(data_set.train_labels_2.shape)
 
     # es = keras.callbacks.EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=3)
     # es = keras.callbacks.EarlyStopping(monitor='val_loss', mode='min', verbose=1)

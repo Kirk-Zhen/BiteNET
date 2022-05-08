@@ -31,7 +31,7 @@ class VisitDataset(DatasetTemplate):
     def process_data(self):
         if not self.dx_only:
             self.max_len_visit += 10
-            print(self.max_len_visit)
+            print(f"max_len_visit:{self.max_len_visit}")
         batches = []
         n_zeros = 0
         for patient in self.patients:

@@ -60,6 +60,7 @@ class DatasetTemplate(metaclass=ABCMeta):
         all_codes = []  # store all diagnosis codes
         all_cpt_codes = []
 
+        print(f"Number of patient: {len(self.patients)}")
         for patient in self.patients:
             for visit in patient['visits']:
                 self.total_visits += 1
@@ -138,7 +139,7 @@ class DatasetTemplate(metaclass=ABCMeta):
 
         print('number of CPTs: ', len(all_cpt_codes))
         print('avg number of CPTs: ', len(all_cpt_codes) / self.total_visits)
-
+        print(f"Visits: {self.total_visits}")
     # @abstractmethod
     def generate_batch(self):
         pass
