@@ -1,5 +1,33 @@
 # Reproducibility of [BiteNet](https://arxiv.org/pdf/2009.13252.pdf)
+--------
+## Citation
+If you find this work useful for your research, please cite the original paper:
+##### BibTex Citation:
+```
+@INPROCEEDINGS {BiteNet,
+author = {X. Peng and G. Long and T. Shen and S. Wang and J. Jiang and C. Zhang},
+booktitle = {2020 IEEE International Conference on Data Mining (ICDM)},
+title = {BiteNet: Bidirectional Temporal Encoder Network to Predict Medical Outcomes},
+year = {2020},
+volume = {},
+issn = {},
+pages = {412-421},
+keywords = {hospitals;transforms;predictive models;data models;task analysis;electronic medical records;medical diagnostic imaging},
+doi = {10.1109/ICDM50108.2020.00050},
+url = {https://doi.ieeecomputersociety.org/10.1109/ICDM50108.2020.00050},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA},
+month = {nov}
+}
+```
+##### Plain Text Citation:
+X. Peng, *et al.*, "BiteNet: Bidirectional Temporal Encoder Network to Predict Medical Outcomes," in 2020 *IEEE International Conference on Data Mining (ICDM)*, Sorrento, Italy, 2020 pp. 412-421.
+doi: 10.1109/ICDM50108.2020.00050
 
+##### Source code reference:
+The code in this project is adjusted from the [source code of BiteNet](https://github.com/Xueping/BiteNet) , the [keras implementation of RETAIN](https://github.com/Optum/retain-keras), and the [Homework 4 of UIUC CS598 Deep Learning for Healthcare ](https://www.coursera.org/learn/cs598-deep-learning-for-healthcare/programming/3SknD/homework-4-retain).
+
+------------------
 ##  Environment and Dependencies
 |Package|Version|
 |:---|:---|
@@ -18,15 +46,15 @@ To install all requirements:
 pip install -r requirements.txt
 ```
 
-
+------------------
 ## Framework:  
 <img src="fig/MasEnc.png" width="150"/><img src="/fig/BiteNet.png" width="300"/> 
 
-
+------------------
 ## Data Preparation
-Put everything necessary `.csv` files in the `dataset` folder.  
+Put everything necessary `.csv` files from the [MIMIC III Clinical Database](https://physionet.org/content/mimiciii/1.4/) in the `dataset` folder.  
 
-The final folder structure is like:
+The final folder structure should be like:
 ```
 ./
 |   
@@ -43,13 +71,15 @@ The final folder structure is like:
 ```
 Execute `dataset.data_prepararion.py` for MIMIC III dataset pre-processing.
 
+
+------------------
 ## Run the Model
-RETAIN on Re-Admission task:
+##### RETAIN on Re-Admission task:
 ```
 Open `RETAIN_Readm_Diagn.ipynb` on Colab, and execuete every cells. 
 ```
 
-BiteNet-1 on Re-Admission task:
+##### BiteNet-1 on Re-Admission task:
 ```bash
 python BiteNet_mh_RE.py \
         --data_source mimic3  --model Bite --verbose True --task BiteNet \
@@ -59,7 +89,7 @@ python BiteNet_mh_RE.py \
 ```
 
 
-BiteNet-1 on Diagnosis task:
+##### BiteNet-1 on Diagnosis task:
 ```bash
 python BiteNet_mh_DX.py \
         --data_source mimic3  --model Bite --verbose True --task BiteNet \
@@ -68,7 +98,7 @@ python BiteNet_mh_DX.py \
         --min_cut_freq 5 --embedding_size 150 --dropout 0.1 --only_dx_flag False
 ```
 
-BiteNet-2 on Re-Admission task:
+##### BiteNet-2 on Re-Admission task:
 ```bash
 python BiteNet_mh_RE.py \
         --data_source mimic3  --model Bite --verbose True --task BiteNet \
@@ -78,7 +108,7 @@ python BiteNet_mh_RE.py \
 ```
 
 
-BiteNet-2 on Diagnosis task:
+##### BiteNet-2 on Diagnosis task:
 ```bash
 python BiteNet_mh_DX.py \
         --data_source mimic3  --model Bite --verbose True --task BiteNet \
@@ -87,7 +117,7 @@ python BiteNet_mh_DX.py \
         --min_cut_freq 5 --embedding_size 150 --dropout 0.1 --only_dx_flag False
 ```
 
-BiteNet-3 on Re-Admission task:
+##### BiteNet-3 on Re-Admission task:
 ```bash
 python BiteNet_mh_RE.py \
         --data_source mimic3  --model Bite --verbose True --task BiteNet \
@@ -97,7 +127,7 @@ python BiteNet_mh_RE.py \
 ```
 
 
-BiteNet-3 on Diagnosis task:
+##### BiteNet-3 on Diagnosis task:
 ```bash
 python BiteNet_mh_DX.py \
         --data_source mimic3  --model Bite --verbose True --task BiteNet \
@@ -106,6 +136,7 @@ python BiteNet_mh_DX.py \
         --min_cut_freq 5 --embedding_size 150 --dropout 0.1 --only_dx_flag False
 ```
 
+------------------
 ## Result
 
 |  Data |   Model   | Readmission (PR-AUC) | Diag k=5 | Diag k=10 | Diag k=15 | Diag k=20 | Diag k=25 | Diag k=30 |
@@ -120,23 +151,3 @@ python BiteNet_mh_DX.py \
 | Dx&Tx | BiteNet-3 |        0.3268        |  0.5434  |   0.5239  |   0.5713  |   0.6715  |   0.7124  |   0.7868  |
 
 
-## Citation
-If you find this work useful for your research, please cite the original paper:
-
-```
-@INPROCEEDINGS {9338291,
-author = {X. Peng and G. Long and T. Shen and S. Wang and J. Jiang and C. Zhang},
-booktitle = {2020 IEEE International Conference on Data Mining (ICDM)},
-title = {BiteNet: Bidirectional Temporal Encoder Network to Predict Medical Outcomes},
-year = {2020},
-volume = {},
-issn = {},
-pages = {412-421},
-keywords = {hospitals;transforms;predictive models;data models;task analysis;electronic medical records;medical diagnostic imaging},
-doi = {10.1109/ICDM50108.2020.00050},
-url = {https://doi.ieeecomputersociety.org/10.1109/ICDM50108.2020.00050},
-publisher = {IEEE Computer Society},
-address = {Los Alamitos, CA, USA},
-month = {nov}
-}
-```
