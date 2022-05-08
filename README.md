@@ -1,9 +1,9 @@
-# BiteNet
+# Reproducibility of [BiteNet](https://arxiv.org/pdf/2009.13252.pdf)
 
 ##  Environment and Dependencies
-|||
+|Package|Version|
 |:---|:---|
-|**Package**|**Version**
+|||
 |pandas|1.3.5
 |pandas-datareader|0.9.0
 |sklearn|0.0
@@ -17,6 +17,12 @@ To install all requirements:
 ```bash
 pip install -r requirements.txt
 ```
+
+
+## Framework:  
+<img src="fig/MasEnc.png" width="150"/><img src="/fig/BiteNet.png" width="300"/> 
+
+
 ## Data Preparation
 Put everything necessary `.csv` files in the `dataset` folder.  
 
@@ -112,3 +118,25 @@ python BiteNet_mh_DX.py \
 | Dx&Tx | BiteNet-1 |        0.2943        |  0.5443  |   0.5390  |   0.5653  |   0.6749  |   0.7389  |   0.7989  |
 | Dx&Tx | BiteNet-2 |        0.3122        |  0.5523  |   0.5420  |   0.5742  |   0.6734  |   0.7325  |   0.7817  |
 | Dx&Tx | BiteNet-3 |        0.3268        |  0.5434  |   0.5239  |   0.5713  |   0.6715  |   0.7124  |   0.7868  |
+
+
+## Citation
+If you find this work useful for your researc, please cite the original paper:
+
+```
+@INPROCEEDINGS {9338291,
+author = {X. Peng and G. Long and T. Shen and S. Wang and J. Jiang and C. Zhang},
+booktitle = {2020 IEEE International Conference on Data Mining (ICDM)},
+title = {BiteNet: Bidirectional Temporal Encoder Network to Predict Medical Outcomes},
+year = {2020},
+volume = {},
+issn = {},
+pages = {412-421},
+keywords = {hospitals;transforms;predictive models;data models;task analysis;electronic medical records;medical diagnostic imaging},
+doi = {10.1109/ICDM50108.2020.00050},
+url = {https://doi.ieeecomputersociety.org/10.1109/ICDM50108.2020.00050},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA},
+month = {nov}
+}
+```
