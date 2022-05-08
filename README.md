@@ -1,5 +1,6 @@
 # Reproducibility of [BiteNet](https://arxiv.org/pdf/2009.13252.pdf)
---------
+
+
 ## Citation
 If you find this work useful for your research, please cite the original paper:
 ##### BibTex Citation:
@@ -27,7 +28,7 @@ doi: 10.1109/ICDM50108.2020.00050
 ##### Source code reference:
 The code in this project is adjusted from the [source code of BiteNet](https://github.com/Xueping/BiteNet) , the [keras implementation of RETAIN](https://github.com/Optum/retain-keras), and the [Homework 4 of UIUC CS598 Deep Learning for Healthcare ](https://www.coursera.org/learn/cs598-deep-learning-for-healthcare/programming/3SknD/homework-4-retain).
 
-------------------
+
 ##  Environment and Dependencies
 |Package|Version|
 |:---|:---|
@@ -46,11 +47,10 @@ To install all requirements:
 pip install -r requirements.txt
 ```
 
-------------------
+
 ## Framework:  
 <img src="fig/MasEnc.png" width="150"/><img src="/fig/BiteNet.png" width="300"/> 
 
-------------------
 ## Data Preparation
 Put everything necessary `.csv` files from the [MIMIC III Clinical Database](https://physionet.org/content/mimiciii/1.4/) in the `dataset` folder.  
 
@@ -72,7 +72,7 @@ The final folder structure should be like:
 Execute `dataset.data_prepararion.py` for MIMIC III dataset pre-processing.
 
 
-------------------
+
 ## Run the Model
 ##### RETAIN on Re-Admission task:
 ```
@@ -136,7 +136,7 @@ python BiteNet_mh_DX.py \
         --min_cut_freq 5 --embedding_size 150 --dropout 0.1 --only_dx_flag False
 ```
 
-------------------
+
 ## Result
 
 |  Data |   Model   | Readmission (PR-AUC) | Diag k=5 | Diag k=10 | Diag k=15 | Diag k=20 | Diag k=25 | Diag k=30 |
