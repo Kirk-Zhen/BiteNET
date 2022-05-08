@@ -121,7 +121,7 @@ python BiteNet_mh_DX.py \
 
 
 ## Citation
-If you find this work useful for your researc, please cite the original paper:
+If you find this work useful for your research, please cite the original paper:
 
 ```
 @INPROCEEDINGS {9338291,
