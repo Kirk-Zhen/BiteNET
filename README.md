@@ -76,7 +76,9 @@ Execute `dataset.data_prepararion.py` for MIMIC III dataset pre-processing.
 ## Run the Model
 ##### RETAIN on Re-Admission task:
 ```
-Open `RETAIN_Readm_Diagn.ipynb` on Colab, and execuete every cells. 
+1. Open `RETAIN_Readm_Diagn.ipynb` on Colab.
+2. Upload the files in folder `retain_files` to the colab.
+3. Execuete every cells. 
 ```
 
 ##### BiteNet-1 on Re-Admission task:
