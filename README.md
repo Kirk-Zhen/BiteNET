@@ -52,7 +52,7 @@ pip install -r requirements.txt
 <img src="fig/MasEnc.png" width="200"/><img src="/fig/BiteNet.png" width="400"/> 
 
 ## Data Preparation
-Put everything necessary `.csv` files from the [MIMIC III Clinical Database](https://physionet.org/content/mimiciii/1.4/) in the `dataset` folder.  
+Put every necessary `.csv` files from the [MIMIC III Clinical Database](https://physionet.org/content/mimiciii/1.4/) in the `dataset` folder.  
 
 The final folder structure should be like:
 ```
