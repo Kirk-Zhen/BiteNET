@@ -6,19 +6,19 @@ If you find this work useful for your research, please cite the original paper:
 ##### BibTex Citation:
 ```
 @INPROCEEDINGS {BiteNet,
-author = {X. Peng and G. Long and T. Shen and S. Wang and J. Jiang and C. Zhang},
-booktitle = {2020 IEEE International Conference on Data Mining (ICDM)},
-title = {BiteNet: Bidirectional Temporal Encoder Network to Predict Medical Outcomes},
-year = {2020},
-volume = {},
-issn = {},
-pages = {412-421},
-keywords = {hospitals;transforms;predictive models;data models;task analysis;electronic medical records;medical diagnostic imaging},
-doi = {10.1109/ICDM50108.2020.00050},
-url = {https://doi.ieeecomputersociety.org/10.1109/ICDM50108.2020.00050},
-publisher = {IEEE Computer Society},
-address = {Los Alamitos, CA, USA},
-month = {nov}
+        author = {X. Peng and G. Long and T. Shen and S. Wang and J. Jiang and C. Zhang},
+        booktitle = {2020 IEEE International Conference on Data Mining (ICDM)},
+        title = {BiteNet: Bidirectional Temporal Encoder Network to Predict Medical Outcomes},
+        year = {2020},
+        volume = {},
+        issn = {},
+        pages = {412-421},
+        keywords = {hospitals;transforms;predictive models;data models;task analysis;electronic medical records;medical diagnostic imaging},
+        doi = {10.1109/ICDM50108.2020.00050},
+        url = {https://doi.ieeecomputersociety.org/10.1109/ICDM50108.2020.00050},
+        publisher = {IEEE Computer Society},
+        address = {Los Alamitos, CA, USA},
+        month = {nov}
 }
 ```
 ##### Plain Text Citation:
@@ -76,7 +76,9 @@ Execute `dataset.data_prepararion.py` for MIMIC III dataset pre-processing.
 ## Run the Model
 ##### RETAIN on Re-Admission task:
 ```
-Open `RETAIN_Readm_Diagn.ipynb` on Colab, and execuete every cells. 
+1. Open `RETAIN_Readm_Diagn.ipynb` on Colab.
+2. Upload the files in folder `retain_files` to the colab.
+3. Execuete every cells. 
 ```
 
 ##### BiteNet-1 on Re-Admission task:
